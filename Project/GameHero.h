@@ -7,6 +7,7 @@ using namespace std;
 class Hero {
 public:
 	string name;
+	int level;
 	int health;
 	int damage;
 	int defense;
@@ -15,6 +16,7 @@ public:
 
 	Hero() {
 		name = "Traveler";
+		level = 0;
 		health = 1000;
 		damage = 20;
 		defense = 60;
@@ -25,6 +27,34 @@ public:
 	string get_info() {
 		string msg = "";
 		msg += name + "\n";
+		if (level <= 20) {
+			msg += "      \n";
+			msg += "Level " + to_string(level) + " / 20\n\n";
+		}
+		else if (level <= 40) {
+			msg += "*     \n";
+			msg += "Level " + to_string(level) + " / 40\n\n";
+		}
+		else if (level <= 50) {
+			msg += "**    \n";
+			msg += "Level " + to_string(level) + " / 50\n\n";
+		}
+		else if (level <= 60) {
+			msg += "***   \n";
+			msg += "Level " + to_string(level) + " / 50\n\n";
+		}
+		else if (level <= 70) {
+			msg += "****  \n";
+			msg += "Level " + to_string(level) + " / 70\n\n";
+		}
+		else if (level <= 80) {
+			msg += "***** \n";
+			msg += "Level " + to_string(level) + " / 80\n\n";
+		}
+		else if (level <= 90) {
+			msg += "******\n";
+			msg += "Level " + to_string(level) + " / 90\n\n";
+		}
 		msg += "Max HP  " + to_string(health) + "\n";
 		msg += "DMG  " + to_string(damage) + "\n";
 		msg += "DEF  " + to_string(defense) + "\n";
