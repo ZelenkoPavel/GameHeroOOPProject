@@ -23,6 +23,24 @@ public:
 		crit_damage = 10.0;
 		crit_chance = 5.0;
 	}
+	Hero(string name_hero) {
+		name = name_hero;
+		level = 0;
+		health = 1000;
+		damage = 20;
+		defense = 60;
+		crit_damage = 10.0;
+		crit_chance = 5.0;
+	}
+	Hero(string name_hero, int lvl, int hp, int dmg, int def, double cr_dmg, double cr_ch) {
+		name = name_hero;
+		level = lvl;
+		health = hp;
+		damage = dmg;
+		defense = def;
+		crit_damage = cr_dmg;
+		crit_chance = cr_ch;
+	}
 
 	string get_info() {
 		string msg = "";

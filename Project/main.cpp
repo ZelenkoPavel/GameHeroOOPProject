@@ -5,9 +5,13 @@ using namespace std;
 
 int main() {
 	Hero traveler;
+	Hero hero1("Liza");
+	Hero hero2("Hu Tao", 90, 30000, 3257, 127, 329.5, 50.27);
 
 
 	cout << traveler.get_info() << endl;
+	cout << hero1.get_info() << endl;
+	cout << hero2.get_info() << endl;
 
 	return 0;
 }
