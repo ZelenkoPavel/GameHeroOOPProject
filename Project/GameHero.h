@@ -82,4 +82,7 @@ public:
 		return msg;
 	}
 
+	~Hero() {
+		cout << "calling destructor" << endl;
+	}
 };
