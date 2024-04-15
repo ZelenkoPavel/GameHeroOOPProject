@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include <time.h>
 
 using namespace std;
 
@@ -15,19 +16,23 @@ public:
 	double crit_chance;
 
 	Hero() {
+		srand(time(NULL));
+
 		name = "Traveler";
 		level = 0;
-		health = 1000;
-		damage = 20;
+		health = rand() % 1000 + 1000;
+		damage = rand() % 20 + 20;
 		defense = 60;
 		crit_damage = 10.0;
 		crit_chance = 5.0;
 	}
 	Hero(string name_hero) {
+		srand(time(NULL));
+
 		name = name_hero;
 		level = 0;
-		health = 1000;
-		damage = 20;
+		health = rand() % 1000 + 1000;
+		damage = rand() % 20 + 20;
 		defense = 60;
 		crit_damage = 10.0;
 		crit_chance = 5.0;
