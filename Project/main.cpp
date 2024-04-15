@@ -16,5 +16,11 @@ int main() {
 	const int size = 3;
 	Hero heroes[size]{ {},{"Liza"},{"Hu Tao", 90, 30000, 3257, 127, 329.5, 50.27} };
 
+
+	Manager manager;
+
+	cout << "Best damage is " << manager.getMaxDamage(heroes, size) << endl;
+	cout << "Worst damage is " << manager.getMinDamage(heroes, size) << endl;
+
 	return 0;
 }
