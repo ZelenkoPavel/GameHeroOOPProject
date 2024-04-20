@@ -6,7 +6,8 @@
 using namespace std;
 
 class Hero {
-public:
+private:
+
 	string name;
 	int level;
 	int health;
@@ -14,6 +15,8 @@ public:
 	int defense;
 	double crit_damage;
 	double crit_chance;
+
+public:
 
 	Hero() {
 		srand(time(NULL));
@@ -33,7 +36,7 @@ public:
 		level = 0;
 		health = rand() % 1000 + 1000;
 		damage = rand() % 20 + 20;
-		defense = 60;
+		defense = 10;
 		crit_damage = 10.0;
 		crit_chance = 5.0;
 	}
@@ -90,4 +93,67 @@ public:
 	~Hero() {
 		cout << "calling destructor" << endl;
 	}
+
+
+	string getName() {
+		return name;
+	}
+	void setName(string nm) {
+		name = nm;
+	}
+
+	int getLevel() {
+		return level;
+	}
+	void getLevel(int l) {
+		if (l >= 0 && l <= 90) {
+			level = l;
+		}
+	}
+
+	int getHealth() {
+		return health;
+	}
+	void setHealth(int hp){
+		if (hp > 999 && hp < 99999) {
+			health = hp;
+		}
+	}
+
+	int getDamage() {
+		return damage;
+	}
+	void setDamage(int dmg) {
+		if (dmg > 10 && dmg < 10000) {
+			damage = dmg;
+		}
+	}
+
+	int getDefense() {
+		return defense;
+	}
+	void setDefense(int def) {
+		if (def > 10 && def < 10000) {
+			defense = def;
+		}
+	}
+
+	double getCritDamage() {
+		return crit_damage;
+	}
+	void setCritDamage(double cr_d) {
+		if (cr_d >= 5 && cr_d < 600) {
+			crit_damage = cr_d;
+		}
+	}
+
+	double getCritChanc() {
+		return crit_chance;
+	}
+	void setCritChanc(double cr_ch) {
+		if (cr_ch >= 5 && cr_ch < 150) {
+			crit_chance = cr_ch;
+		}
+	}
+
 };
