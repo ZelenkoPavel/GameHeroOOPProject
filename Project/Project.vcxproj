@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="GameHero.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Manager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameHero.h" />
