@@ -1,39 +1,5 @@
 #include "GameHero.h"
 
-Hero::Hero() {
-	srand(time(NULL));
-
-	name = "Traveler";
-	level = 0;
-	health = rand() % 1000 + 1000;
-	damage = rand() % 20 + 20;
-	defense = 60;
-	crit_damage = 10.0;
-	crit_chance = 5.0;
-}
-Hero::Hero(string name) {
-	srand(time(NULL));
-
-	this->name = name;
-	level = 0;
-	health = rand() % 1000 + 1000;
-	damage = rand() % 20 + 20;
-	defense = 10;
-	crit_damage = 10.0;
-	crit_chance = 5.0;
-}
-Hero::Hero(string name, int level, int health, int damage, int defense,
-	double crit_damage, double crit_chance) {
-
-	this->name = name;
-	this->level = level;
-	this->health = health;
-	this->damage = damage;
-	this->defense = defense;
-	this->crit_damage = crit_damage;
-	this->crit_chance = crit_chance;
-}
-
 string Hero::get_info() {
 	string msg = "";
 	msg += name + "\n";
@@ -72,10 +38,6 @@ string Hero::get_info() {
 	msg += "Crit chance  " + to_string(crit_chance) + "%\n";
 
 	return msg;
-}
-
-Hero::~Hero() {
-	cout << "calling destructor" << endl;
 }
 
 

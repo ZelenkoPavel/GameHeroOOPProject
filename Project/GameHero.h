@@ -18,13 +18,19 @@ private:
 
 public:
 
-	Hero();
-	Hero(string name_hero);
-	Hero(string name_hero, int lvl, int hp, int dmg, int def, double cr_dmg, double cr_ch);
+	Hero() : name("Traveler"), level(0), health(rand() % 1000 + 1000), 
+		damage(rand() % 20 + 20), defense(10), crit_damage(50), crit_chance(5){}
+
+	Hero(string name) : name(name), level(0), health(rand() % 1000 + 1000),
+		damage(rand() % 20 + 20), defense(10), crit_damage(50), crit_chance(5){}
+
+	Hero(string name, int level, int health, int damage, int defense,
+		double crit_damage, double crit_chance) : name(name), level(level), health(health),
+		damage(damage), defense(defense),crit_damage(crit_damage), crit_chance(crit_chance){}
 
 	string get_info();
 
-	~Hero();
+	~Hero(){}
 
 
 	string getName();
