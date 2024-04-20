@@ -11,10 +11,10 @@ Hero::Hero() {
 	crit_damage = 10.0;
 	crit_chance = 5.0;
 }
-Hero::Hero(string name_hero) {
+Hero::Hero(string name) {
 	srand(time(NULL));
 
-	name = name_hero;
+	this->name = name;
 	level = 0;
 	health = rand() % 1000 + 1000;
 	damage = rand() % 20 + 20;
@@ -22,14 +22,16 @@ Hero::Hero(string name_hero) {
 	crit_damage = 10.0;
 	crit_chance = 5.0;
 }
-Hero::Hero(string name_hero, int lvl, int hp, int dmg, int def, double cr_dmg, double cr_ch) {
-	name = name_hero;
-	level = lvl;
-	health = hp;
-	damage = dmg;
-	defense = def;
-	crit_damage = cr_dmg;
-	crit_chance = cr_ch;
+Hero::Hero(string name, int level, int health, int damage, int defense,
+	double crit_damage, double crit_chance) {
+
+	this->name = name;
+	this->level = level;
+	this->health = health;
+	this->damage = damage;
+	this->defense = defense;
+	this->crit_damage = crit_damage;
+	this->crit_chance = crit_chance;
 }
 
 string Hero::get_info() {
@@ -80,60 +82,60 @@ Hero::~Hero() {
 string Hero::getName() {
 	return name;
 }
-void Hero::setName(string nm) {
-	name = nm;
+void Hero::setName(string name) {
+	this->name = name;
 }
 
 int Hero::getLevel() {
 	return level;
 }
-void Hero::getLevel(int l) {
-	if (l >= 0 && l <= 90) {
-		level = l;
+void Hero::getLevel(int level) {
+	if (level >= 0 && level <= 90) {
+		this->level = level;
 	}
 }
 
 int Hero::getHealth() {
 	return health;
 }
-void Hero::setHealth(int hp) {
-	if (hp > 999 && hp < 99999) {
-		health = hp;
+void Hero::setHealth(int health) {
+	if (health > 999 && health < 99999) {
+		this->health = health;
 	}
 }
 
 int Hero::getDamage() {
 	return damage;
 }
-void Hero::setDamage(int dmg) {
-	if (dmg > 10 && dmg < 10000) {
-		damage = dmg;
+void Hero::setDamage(int damage) {
+	if (damage > 10 && damage < 10000) {
+		this->damage = damage;
 	}
 }
 
 int Hero::getDefense() {
 	return defense;
 }
-void Hero::setDefense(int def) {
-	if (def > 10 && def < 10000) {
-		defense = def;
+void Hero::setDefense(int defense) {
+	if (defense > 10 && defense < 10000) {
+		this->defense = defense;
 	}
 }
 
 double Hero::getCritDamage() {
 	return crit_damage;
 }
-void Hero::setCritDamage(double cr_d) {
-	if (cr_d >= 5 && cr_d < 600) {
-		crit_damage = cr_d;
+void Hero::setCritDamage(double crit_damage) {
+	if (crit_damage >= 5 && crit_damage < 600) {
+		this->crit_damage = crit_damage;
 	}
 }
 
 double Hero::getCritChanc() {
 	return crit_chance;
 }
-void Hero::setCritChanc(double cr_ch) {
-	if (cr_ch >= 5 && cr_ch < 150) {
-		crit_chance = cr_ch;
+void Hero::setCritChanc(double crit_chance) {
+	if (crit_chance >= 5 && crit_chance < 150) {
+		this->crit_chance = crit_chance;
 	}
 }
