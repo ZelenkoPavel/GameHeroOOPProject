@@ -1,14 +1,15 @@
 #pragma once
 #include "GameHero.h"
+#include "Squad.h"
 
 
 class Manager {
 public:
 
-	int getMaxDamage(Hero* heroes, int length);
-	int getMinDamage(Hero* heroes, int length);
+	int getMaxDamage(Squad squad);
+	int getMinDamage(Squad squad);
 
-	double calcAverageDamage(Hero* heroes, int length);
+	double calcAverageDamage(Squad squad);
 
-	Hero getBestHero(Hero* heroes, int length);
+	Hero getBestHero(Squad squad);
 };
