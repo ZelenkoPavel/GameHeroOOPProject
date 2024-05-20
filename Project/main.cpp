@@ -35,5 +35,16 @@ int main() {
 	cout << squad1.getInfo() << endl << endl;
 	cout << squad2.getInfo() << endl;
 
+	cout << "____________________________" << endl;
+
+	squad2.remove(hero7);
+
+	Hero Kira_Yoshikage("Kira Yoshikage", 90, 36000, 10000, 300, 500, 200);
+
+	squad2.add(Kira_Yoshikage);
+
+	cout << squad2.getInfo() << endl;
+	
+
 	return 0;
 }

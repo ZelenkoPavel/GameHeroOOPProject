@@ -70,7 +70,7 @@ int Hero::getDamage() {
 	return damage;
 }
 void Hero::setDamage(int damage) {
-	if (damage > 10 && damage < 10000) {
+	if (damage > 10 && damage <= 10000) {
 		this->damage = damage;
 	}
 }
@@ -79,7 +79,7 @@ int Hero::getDefense() {
 	return defense;
 }
 void Hero::setDefense(int defense) {
-	if (defense > 10 && defense < 10000) {
+	if (defense > 10 && defense <= 10000) {
 		this->defense = defense;
 	}
 }
@@ -88,7 +88,7 @@ double Hero::getCritDamage() {
 	return crit_damage;
 }
 void Hero::setCritDamage(double crit_damage) {
-	if (crit_damage >= 5 && crit_damage < 600) {
+	if (crit_damage >= 5 && crit_damage <= 600) {
 		this->crit_damage = crit_damage;
 	}
 }
@@ -97,7 +97,7 @@ double Hero::getCritChanc() {
 	return crit_chance;
 }
 void Hero::setCritChanc(double crit_chance) {
-	if (crit_chance >= 5 && crit_chance < 150) {
+	if (crit_chance >= 5 && crit_chance <= 300) {
 		this->crit_chance = crit_chance;
 	}
 }

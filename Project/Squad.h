@@ -15,9 +15,11 @@ private:
 public:
 	int getSize();
 	void add(Hero hero);
-	//bool remove(Hero hero);
+	void remove(Hero hero);
+	void remove(int index);
 	Hero get(int index);
 	string getInfo();
+	int findFirstIndex(Hero hero);
 	//...
 };
 

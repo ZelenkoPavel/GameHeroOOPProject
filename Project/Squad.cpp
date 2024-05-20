@@ -26,8 +26,45 @@ void Squad::add(Hero hero) {
 	size++;
 }
 
-//bool Squad::remove(Hero hero){
-//}
+void Squad::remove(Hero hero) {
+	int index = findFirstIndex(hero);
+	remove(index);
+}
+
+int Squad::findFirstIndex(Hero hero) {
+
+	for (int i = 0; i < size; i++)
+	{
+		if (list[i].getName() == hero.getName()
+			&& list[i].getLevel() == hero.getLevel()
+			&& list[i].getHealth() == hero.getHealth()
+			&& list[i].getDamage() == hero.getDamage()
+			&& list[i].getDefense() == hero.getDefense()
+			&& list[i].getCritDamage() == hero.getCritDamage()
+			&& list[i].getCritChanc() == hero.getCritChanc()) {
+			return i;
+		}
+	}
+	return -1;
+}
+
+void Squad::remove(int index) {
+	if (index >= 0 && index < size) {
+		Hero* temp = new Hero[size - 1];
+
+		for (int i = 0, j = 0; i < size; i++)
+		{
+			if (i != index) {
+				temp[j] = list[i];
+				j++;
+			}
+		}
+
+		delete[] list;
+		list = temp;
+		size--;
+	}
+}
 
 Hero Squad::get(int index) {
 	if (index >= 0 && index < size) {
