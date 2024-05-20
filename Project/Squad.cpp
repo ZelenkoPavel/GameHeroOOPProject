@@ -45,6 +45,6 @@ string Squad::getInfo() {
 		s += "\n" + to_string(i + 1) + ") ";
 		s += list[i].get_info();
 	}
-
+	 
 	return s;
 }
