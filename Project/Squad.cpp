@@ -5,14 +5,25 @@ int Squad::getSize() {
 	return size;
 }
 
-bool Squad::add(Hero hero) {
-	if (size < 6) {
+void Squad::add(Hero hero) {
+	if (size == 0) {
+		list = new Hero[1];
 		list[size] = hero;
-		size++;
-		return true;
+	}
+	else if (size < 6) {
+		Hero* temp = new Hero[size + 1];
+
+		for (int i = 0; i < size; i++)
+		{
+			temp[i] = list[i];
+		}
+
+		temp[size] = hero;
+		delete[] list;
+		list = temp;
 	}
 
-	return false;
+	size++;
 }
 
 //bool Squad::remove(Hero hero){

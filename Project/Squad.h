@@ -9,12 +9,12 @@ class Squad
 {
 
 private:
-	Hero list[6];
+	Hero* list;
 	int size = 0;
 
 public:
 	int getSize();
-	bool add(Hero hero);
+	void add(Hero hero);
 	//bool remove(Hero hero);
 	Hero get(int index);
 	string getInfo();
