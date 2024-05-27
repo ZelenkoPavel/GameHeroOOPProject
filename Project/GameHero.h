@@ -28,7 +28,7 @@ public:
 		double crit_damage, double crit_chance) : name(name), level(level), health(health),
 		damage(damage), defense(defense),crit_damage(crit_damage), crit_chance(crit_chance){}
 
-	string get_info();
+	string getInfoAboutHero();
 
 	~Hero(){}
 

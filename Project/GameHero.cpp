@@ -1,6 +1,6 @@
 #include "GameHero.h"
 
-string Hero::get_info() {
+string Hero::getInfoAboutHero() {
 	string msg = "";
 	msg += name + "\n";
 	if (level <= 20) {

@@ -80,7 +80,7 @@ string Squad::getInfo() {
 	for (int i = 0; i < size; i++)
 	{
 		s += "\n" + to_string(i + 1) + ") ";
-		s += list[i].get_info();
+		s += list[i].getInfoAboutHero();
 	}
 	 
 	return s;
