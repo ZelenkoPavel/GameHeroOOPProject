@@ -27,6 +27,9 @@
     <ClCompile Include="Squad.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Healer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameHero.h">
@@ -36,6 +39,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Squad.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Healer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
