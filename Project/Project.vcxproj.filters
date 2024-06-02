@@ -30,6 +30,9 @@
     <ClCompile Include="Healer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Artifact.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameHero.h">
@@ -42,6 +45,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Healer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Artifact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

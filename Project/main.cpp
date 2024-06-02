@@ -2,16 +2,22 @@
 #include "Manager.h"
 #include "Squad.h"
 #include "Healer.h"
+#include "Artifact.h"
 #include <iostream>
 
 using namespace std;
 
 int main() {
-	Healer Barbara("Barbara");
-	
+	Artifact artifact1;
 
+	cout << artifact1.getInfoAboutArtifact() << endl;
 
-	cout << Barbara.getInfoAboutHealer() << endl;
+	Hero hero;
+	cout << "Before\n" << hero.getInfoAboutHero() << endl;
+
+	Hero hero2(hero + artifact1);
+
+	cout << "After\n" << hero2.getInfoAboutHero() << endl;
 
 	return 0;
 }

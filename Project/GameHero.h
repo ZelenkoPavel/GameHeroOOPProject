@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include <time.h>
+#include "Artifact.h"
 
 using namespace std;
 
@@ -17,6 +18,7 @@ private:
 	double crit_chance;
 
 public:
+	//srand(time(NULL));
 
 	Hero() : name("Traveler"), level(0), health(rand() % 1000 + 1000), 
 		damage(rand() % 20 + 20), defense(10), crit_damage(50), crit_chance(5){}
@@ -34,24 +36,26 @@ public:
 
 
 	string getName();
-	void setName(string nm);
+	void setName(string name);
 
 	int getLevel();
-	void getLevel(int l);
+	void getLevel(int level);
 
 	int getHealth();
-	void setHealth(int hp);
+	void setHealth(int health);
 
 	int getDamage();
-	void setDamage(int dmg);
+	void setDamage(int damage);
 
 	int getDefense();
-	void setDefense(int def);
+	void setDefense(int defense);
 
 	double getCritDamage();
-	void setCritDamage(double cr_d);
+	void setCritDamage(double crit_damage);
 
 	double getCritChanc();
-	void setCritChanc(double cr_ch);
+	void setCritChanc(double crit_chance);
+
+	Hero operator+(Artifact artifact);
 
 };

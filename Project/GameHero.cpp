@@ -101,3 +101,13 @@ void Hero::setCritChanc(double crit_chance) {
 		this->crit_chance = crit_chance;
 	}
 }
+
+Hero Hero::operator+(Artifact artifact) {
+	Hero temp(name, level, health + artifact.getAddHealth(),
+	damage + artifact.getAddDamage(),
+	defense + artifact.getAddDefense(),
+	crit_damage + artifact.getAddCritDamage(),
+	crit_chance + artifact.getAddCritChanc());
+
+	return temp;
+}
